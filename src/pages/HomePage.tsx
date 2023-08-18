@@ -1,10 +1,15 @@
+import Game from "../components/Game";
+import Header from "../components/Header";
+import Rules from "../components/Rules";
 
 const HomePage = () => {
   return (
-    <div>
+    <main className="p-[1rem]">
+      <Header />
+      <Game />
+      <Rules />
+    </main>
+  );
+};
 
-    </div>
-  )
-}
-
-export default HomePage
+export default HomePage;
