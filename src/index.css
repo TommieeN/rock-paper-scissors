@@ -12,11 +12,21 @@
 /* - Scissors Gradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%)
 - Paper Gradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%)
 - Rock Gradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%) */
-
+/* * {
+color: #ec9e0e to hsl(40, 84%, 53%);
+color: #dc2e4e to hsl(349, 70%, 56%);
+} */
 
 html {
   background: linear-gradient(214deg, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
   background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.button-style {
+  border-radius: 100%;
+  background-color: white;
+  width: fit-content;
 }
 
 .background-image {
