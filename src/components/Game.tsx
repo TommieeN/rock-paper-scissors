@@ -2,15 +2,11 @@ import { useState } from "react";
 
 import Choice from "../components/Choice";
 import Round from "./Round";
-// import Paper from "../assets/images/icon-paper.svg";
-// import Scissors from "../assets/images/icon-scissors.svg";
-// import Rock from "../assets/images/icon-rock.svg";
 
 const Game = () => {
   const [userChoice, setUserChoice] = useState<string | null>(null);
   const [computerChoice, setComputerChoice] = useState<string | null>(null);
   const [win, setWin] = useState<boolean | null>(null)
-  // const [win, setWin] = useState<string | null>(null);
 
   const choices = ["rock", "paper", "scissors"];
 
@@ -20,11 +16,19 @@ const Game = () => {
     checkResult();
   };
 
+  // Randomize computer choice
   const generateComputerChoice = () => {
-    const randomChoice = choices[Math.floor(Math.random() * choices.length)];
-    setComputerChoice(randomChoice);
+
+    setComputerChoice(null)
+
+    setTimeout(() => {
+      const randomChoice = choices[Math.floor(Math.random() * choices.length)];
+      setComputerChoice(randomChoice);
+      checkResult()
+    }, 1500)
   };
 
+  // Checking results based on choices
   const checkResult = () => {
     switch (userChoice + computerChoice) {
       case "scissorspaper":
@@ -42,7 +46,7 @@ const Game = () => {
   return (
     <>
       {userChoice ? (
-        <Round userChoice={userChoice} computerChoice={computerChoice} />
+        <Round userChoice={userChoice} computerChoice={computerChoice} win={win} />
       ) : (
         <Choice handleClick={handleClick} />
       )}
