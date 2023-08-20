@@ -40,6 +40,10 @@ const Game = () => {
       case "scissorsrock":
       case "rockpaper":
         setWin(false);
+        break;
+      case "paperpaper":
+      case "scissorsscissors":
+      case "rockrock":
     }
   };
 
