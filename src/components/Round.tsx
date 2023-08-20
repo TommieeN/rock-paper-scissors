@@ -5,11 +5,11 @@ import Rock from "../assets/images/icon-rock.svg";
 interface RoundProps {
   userChoice: string;
   computerChoice: string;
-  choice: string | null;
-  win: boolean;
+  win: boolean | null;
+  handlePlayAgain: () => void; // Function to handle play again
 }
 
-const Round = ({ userChoice, computerChoice, win }: RoundProps) => {
+const Round = ({ userChoice, computerChoice, win, handlePlayAgain }: RoundProps) => {
   const choiceMapping = {
     paper: { color: "#4865f4", icon: Paper },
     scissors: { color: "#ec9e0e", icon: Scissors },
@@ -46,17 +46,19 @@ const Round = ({ userChoice, computerChoice, win }: RoundProps) => {
         </div>
         <p className="pt-[1rem] text-white">THE HOUSE PICKED</p>
       </div>
-      <div className="flex text-center flex-col justify-center">
-        {win === true ? (
-          <h2 className="text-white text-[3rem] font-bold">YOU WIN</h2>
-        ) : win === false ? (
-          <h2 className="text-white text-[3rem] font-bold">YOU LOSE</h2>
-        ) : (
-          <h2 className="text-white text-[3rem] font-bold">TIE</h2>
+      <div className="flex flex-col justify-center">
+        {computerChoice !== null && (
+          win === true ? (
+            <h2 className={`text-white text-[3rem] font-bold ${computerChoice !== null ? "" : "invisible"}`}>YOU WIN</h2>
+          ) : win === false ? (
+            <h2 className={`text-white text-[3rem] font-bold ${computerChoice !== null ? "" : "invisible"}`}>YOU LOSE</h2>
+          ) : (
+            <h2 className={`text-white text-[3rem] font-bold ${computerChoice !== null ? "" : "invisible"}`}>IT'S A TIE</h2>
+          )
         )}
-        <button className="tracking-[0.15rem] text-[#3b4363] text-[0.9rem] bg-white mt-[0.5rem] px-[1rem] py-[0.6rem] rounded-[0.4rem]">
+        {<button onClick={handlePlayAgain} className={`tracking-[0.15rem] text-[#3b4363] text-[0.9rem] bg-white mt-[0.5rem] px-[1rem] py-[0.6rem] rounded-[0.4rem] ${computerChoice !== null ? "" : "invisible"}`}>
           PLAY AGAIN
-        </button>
+        </button>}
       </div>
     </div>
   );
