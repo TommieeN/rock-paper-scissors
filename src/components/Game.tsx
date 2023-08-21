@@ -4,6 +4,8 @@ import Choice from "../components/Choice";
 import Round from "./Round";
 import Header from "./Header";
 
+import { AnimatePresence, easeIn, motion } from "framer-motion";
+
 const Game = () => {
   const [userChoice, setUserChoice] = useState<string | null>(null);
   const [computerChoice, setComputerChoice] = useState<string | null>(null);
@@ -12,7 +14,6 @@ const Game = () => {
   const choices = ["rock", "paper", "scissors"];
 
   useEffect(() => {
-
     // Checking results based on choices
     if (userChoice !== null && computerChoice !== null) {
       switch (userChoice + computerChoice) {
@@ -36,8 +37,10 @@ const Game = () => {
   }, [userChoice, computerChoice]);
 
   const handleClick = (value: string) => {
-    setUserChoice(value);
-    generateComputerChoice();
+    setTimeout(() => {
+      setUserChoice(value);
+      generateComputerChoice();
+    }, 800);
   };
 
   const handlePlayAgain = () => {
@@ -56,21 +59,28 @@ const Game = () => {
   };
 
   return (
-    <>
-      <Header score={score}/>
-      <div className="flex flex-col justify-center items-center">
-      {userChoice ? (
-        <Round
-          userChoice={userChoice}
-          computerChoice={computerChoice}
-          win={win}
-          handlePlayAgain={handlePlayAgain}
-        />
-      ) : (
-        <Choice handleClick={handleClick} />
-      )}
-    </div>
-    </>
+    <AnimatePresence>
+      <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ ease: "easeOut", duration: 1 }}
+      exit={{ opacity: 0 }}
+      >
+        <Header score={score} />
+        <div className="flex flex-col justify-center items-center">
+          {userChoice ? (
+            <Round
+              userChoice={userChoice}
+              computerChoice={computerChoice}
+              win={win}
+              handlePlayAgain={handlePlayAgain}
+            />
+          ) : (
+            <Choice handleClick={handleClick} />
+          )}
+        </div>
+      </motion.div>
+    </AnimatePresence>
   );
 };
 

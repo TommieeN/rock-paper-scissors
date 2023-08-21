@@ -1,6 +1,7 @@
 import Logo from "../assets/images/logo.svg";
+import { motion } from "framer-motion"
 
-const Header = ({ score }) => {
+const Header = ({ score } : { score: number }) => {
   return (
     <div className="sm:flex sm:items-center sm:justify-center">
       <div className="lg:justify-center lg:items-center lg:flex">
@@ -17,9 +18,18 @@ const Header = ({ score }) => {
             <p className="text-[#2a46c0] text-[0.7rem] lg:text-[1.4rem]">
               SCORE
             </p>
-            <p className="text-[#3b4363] text-[2rem] font-bold lg:text-[2.5rem]">
+            <motion.p
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0, opacity: 0 }}
+              transition={{
+                type: "spring",
+                stiffness: 260,
+                damping: 20
+              }}
+              className="text-[#3b4363] text-[2rem] font-bold lg:text-[2.5rem]">
               {score}
-            </p>
+            </motion.p>
           </div>
         </div>
       </div>
