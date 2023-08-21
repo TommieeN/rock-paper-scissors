@@ -14,7 +14,8 @@ module.exports = {
         "border-primary": "#606e85;",
       },
       screens: {
-        lg: "459px",
+        sm: "459px",
+        lg: "768px",
       },
     },
   },

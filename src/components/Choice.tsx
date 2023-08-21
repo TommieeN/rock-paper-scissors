@@ -9,8 +9,8 @@ import { motion } from "framer-motion";
 const Choice = ({ handleClick } :ChoiceProps) => {
 
   return (
-    <section className="bg-triangle-bg background-image lg:w-[20rem]">
-      <div className="my-[7rem] gap-[1.7rem] flex flex-wrap justify-center w-[100%] lg:gap-[4rem] lg:my-[5rem]">
+    <section className="bg-triangle-bg background-image sm:w-[18rem] lg:w-[20rem]">
+      <div className="my-[5rem] gap-[1.7rem] flex flex-wrap justify-center w-[100%] lg:gap-[4rem] lg:my-[2rem]">
         <motion.div
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.8, rotate: 90 }}

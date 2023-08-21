@@ -3,27 +3,11 @@
 @tailwind utilities;
 
 * {
-    font-family: 'Barlow Semi Condensed', sans-serif;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-
-/* - Scissors Gradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%)
-- Paper Gradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%)
-- Rock Gradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%) */
-/* * {
-Scissors
-color: #ec9e0e to hsl(40, 84%, 53%);
-
-Rock
-color: #dc2e4e to hsl(349, 70%, 56%);
-
-Paper
-color: #5671f5;
-
-flex items-center justify-center rounded-[100%] w-[8rem]
-} */
 
 html {
   background: linear-gradient(214deg, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
@@ -37,22 +21,34 @@ html {
   align-items: center;
   border-radius: 100%;
   padding: 0.85rem;
-
 }
+
+.button-style-round {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  padding: 0.85rem;
+  @media (min-width: 459px) {
+    padding: 1.4rem;
+  }
+}
+
 .background-image {
-    background-position: center;
-    background-size: 15rem;
-    background-repeat: no-repeat;
+  background-position: center;
+  background-size: 15rem;
+  background-repeat: no-repeat;
 }
 
 .animate-pulse {
   animation: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
   }
   50% {
-    opacity: .5;
+    opacity: 0.5;
   }
 }
