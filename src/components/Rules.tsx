@@ -7,7 +7,6 @@ const Rules = () => {
 
   const handleModal = () => {
     setShowModal(!showModal);
-    console.log(showModal);
   };
 
   return (

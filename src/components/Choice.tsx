@@ -4,26 +4,32 @@ import Rock from "../assets/images/icon-rock.svg";
 
 const Choice = ({ handleClick }) => {
   return (
-    <div className="my-[7rem] gap-[2rem] flex flex-wrap justify-center bg-triangle-bg background-image w-[100%]">
-      <button
+    <section className="my-[7rem] gap-[1.7rem] flex flex-wrap justify-center bg-triangle-bg background-image w-[100%]">
+      <div
         onClick={() => handleClick("paper")}
-        className="border-[1rem] border-[#4865f4] button-style"
+        className="button-style bg-gradient-paper border-b-[0.35rem] border-[#36479c]"
       >
-        <img className="p-[1.5rem] w-[6rem]" src={Paper} />
-      </button>
-      <button
+        <div className="bg-white border-t-[5px] rounded-[100%]">
+          <img className="p-[1.5rem] w-[100%]" src={Paper} />
+        </div>
+      </div>
+      <div
         onClick={() => handleClick("scissors")}
-        className="border-[1rem] border-[#ec9e0e] button-style"
+        className=" bg-gradient-scissors border-b-[0.35rem] border-[#896728] button-style"
       >
-        <img className="p-[1.5rem] w-[6rem]" src={Scissors} />
-      </button>
-      <button
+        <div className="bg-white border-t-[5px] rounded-[100%]">
+          <img className="p-[1.5rem] w-[100%]" src={Scissors} />
+        </div>
+      </div>
+      <div
         onClick={() => handleClick("rock")}
-        className="border-[1rem] border-[#dc2e4e] button-style"
+        className="bg-gradient-rock border-b-[0.35rem] border-[#932c3f] button-style"
       >
-        <img className="p-[1.5rem] w-[6rem]" src={Rock} />
-      </button>
-    </div>
+        <div className="bg-white border-t-[5px] rounded-[100%]">
+          <img className="p-[1.5rem] w-[100%]" src={Rock} />
+        </div>
+      </div>
+    </section>
   );
 };
 

@@ -31,16 +31,16 @@ const Round = ({ userChoice, computerChoice, win, handlePlayAgain }: RoundProps)
   );
 
   const emptyCircle = () => (
-    <div className="bg-black rounded-[100%] w-[1rem] h-[1rem]"></div>
+    <div className="bg-black rounded-[100%] w-[8rem] h-[8rem] opacity-10"></div>
   );
 
   return (
     <div className="my-[7rem] gap-[2rem] flex flex-wrap justify-center">
-      <div className="text-center">
+      <div className="text-center flex flex-col justify-between">
         {userChoice && getUserChoiceElement(userChoice)}
         <p className="pt-[1rem] text-white">YOU PICKED</p>
       </div>
-      <div className="text-center">
+      <div className="text-center flex flex-col justify-between">
         <div>
           {computerChoice ? getUserChoiceElement(computerChoice) : emptyCircle()}
         </div>

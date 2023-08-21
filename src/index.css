@@ -7,15 +7,22 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    color: #1f3756;
 }
 
 /* - Scissors Gradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%)
 - Paper Gradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%)
 - Rock Gradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%) */
 /* * {
+Scissors
 color: #ec9e0e to hsl(40, 84%, 53%);
+
+Rock
 color: #dc2e4e to hsl(349, 70%, 56%);
+
+Paper
+color: #5671f5;
+
+flex items-center justify-center rounded-[100%] w-[8rem]
 } */
 
 html {
@@ -25,9 +32,12 @@ html {
 }
 
 .button-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 100%;
-  background-color: white;
-  width: fit-content;
+  padding: 0.85rem;
+  width: 8rem;
 }
 
 .background-image {
