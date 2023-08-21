@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://rock-paper-scissors-tommy.netlify.app/)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/rock-paper-scissors-typescript-react-tailwindcss-and-framermotion-Q3KLoU_J9k)
+- Live Site URL: [Deployment](https://rock-paper-scissors-tommy.netlify.app/)
 
 ## My process
 
