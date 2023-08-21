@@ -4,7 +4,7 @@ export interface ChoiceProps {
 
 export interface ResultProps {
   userChoice: string;
-  computerChoice: string;
+  computerChoice: string | null;
   win: boolean | null;
   handlePlayAgain: () => void;
 }
@@ -13,3 +13,6 @@ export interface UserProps {
   userChoice: string;
 }
 
+export interface ComputerChoice {
+  computerChoice: string;
+}

@@ -6,8 +6,7 @@ import { ChoiceProps } from "../types";
 
 import { motion } from "framer-motion";
 
-const Choice = ({ handleClick } :ChoiceProps) => {
-
+const Choice = ({ handleClick }: ChoiceProps) => {
   return (
     <section className="bg-triangle-bg background-image sm:w-[18rem] lg:w-[20rem]">
       <div className="my-[5rem] gap-[1.7rem] flex flex-wrap justify-center w-[100%] lg:gap-[4rem] lg:my-[3rem]">

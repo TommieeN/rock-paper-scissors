@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
-
-import Choice from "../components/Choice";
 import Round from "./Round";
+import Choice from "./Choice";
 import Header from "./Header";
 
-import { AnimatePresence, easeIn, motion } from "framer-motion";
+import { useState, useEffect } from "react";
+
+import { AnimatePresence, motion } from "framer-motion";
 
 const Game = () => {
   const [userChoice, setUserChoice] = useState<string | null>(null);
@@ -36,6 +36,7 @@ const Game = () => {
     }
   }, [userChoice, computerChoice]);
 
+  // Set user's choice on click
   const handleClick = (value: string) => {
     setTimeout(() => {
       setUserChoice(value);
@@ -43,12 +44,14 @@ const Game = () => {
     }, 800);
   };
 
+  // Restart function
   const handlePlayAgain = () => {
     setUserChoice(null);
     setComputerChoice(null);
     setWin(null);
   };
 
+  // Add delay for animation and generate random computer choice
   const generateComputerChoice = () => {
     setComputerChoice(null);
 
@@ -61,10 +64,10 @@ const Game = () => {
   return (
     <AnimatePresence>
       <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ ease: "easeOut", duration: 1 }}
-      exit={{ opacity: 0 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ ease: "easeOut", duration: 1 }}
+        exit={{ opacity: 0 }}
       >
         <Header score={score} />
         <div className="flex flex-col justify-center items-center">

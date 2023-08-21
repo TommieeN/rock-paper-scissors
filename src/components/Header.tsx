@@ -1,7 +1,8 @@
 import Logo from "../assets/images/logo.svg";
-import { motion } from "framer-motion"
 
-const Header = ({ score } : { score: number }) => {
+import { motion } from "framer-motion";
+
+const Header = ({ score }: { score: number }) => {
   return (
     <div className="sm:flex sm:items-center sm:justify-center">
       <div className="lg:justify-center lg:items-center lg:flex">
@@ -25,9 +26,10 @@ const Header = ({ score } : { score: number }) => {
               transition={{
                 type: "spring",
                 stiffness: 260,
-                damping: 20
+                damping: 20,
               }}
-              className="text-[#3b4363] text-[2rem] font-bold lg:text-[2.5rem]">
+              className="text-[#3b4363] text-[2rem] font-bold lg:text-[2.5rem]"
+            >
               {score}
             </motion.p>
           </div>
