@@ -18,15 +18,17 @@ const Round = ({ userChoice, computerChoice, win, handlePlayAgain }: RoundProps)
 
   const getUserChoiceElement = (choice: string) => (
     <div
-      className={`border-[1rem] ${
+      className={`${
         choice === "paper"
-          ? "border-blue-500"
+          ? "bg-gradient-paper"
           : choice === "scissors"
-          ? "border-yellow-500"
-          : "border-red-500"
+          ? "bg-gradient-scissors"
+          : "bg-gradient-rock"
       } button-style`}
     >
-      <img className="p-[1.5rem] w-[6rem]" src={choiceMapping[choice].icon} alt={choice} />
+      <div className="bg-white border-t-[5px] rounded-[100%]">
+      <img className="p-[1.5rem] w-[100%]" src={choiceMapping[choice].icon} alt={choice} />
+      </div>
     </div>
   );
 
@@ -35,11 +37,11 @@ const Round = ({ userChoice, computerChoice, win, handlePlayAgain }: RoundProps)
   );
 
   return (
-    <div className="my-[7rem] gap-[2rem] flex flex-wrap justify-center">
-      <div className="text-center flex flex-col justify-between">
+    <div className="my-[7rem] gap-[2rem] flex flex-wrap items-center justify-center">
+      <div className="text-center">
         {userChoice && getUserChoiceElement(userChoice)}
         <p className="pt-[1rem] text-white">YOU PICKED</p>
-      </div>
+        </div>
       <div className="text-center flex flex-col justify-between">
         <div>
           {computerChoice ? getUserChoiceElement(computerChoice) : emptyCircle()}
