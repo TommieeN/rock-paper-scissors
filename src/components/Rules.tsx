@@ -2,6 +2,7 @@ import { AnimatePresence } from "framer-motion"
 
 import { useState } from "react";
 import Modal from "./Modal";
+
 const Rules = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
 

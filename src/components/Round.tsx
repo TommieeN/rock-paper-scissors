@@ -2,12 +2,7 @@ import Paper from "../assets/images/icon-paper.svg";
 import Scissors from "../assets/images/icon-scissors.svg";
 import Rock from "../assets/images/icon-rock.svg";
 
-interface RoundProps {
-  userChoice: string;
-  computerChoice: string;
-  win: boolean | null;
-  handlePlayAgain: () => void; // Function to handle play again
-}
+import { RoundProps } from "../types";
 
 const Round = ({ userChoice, computerChoice, win, handlePlayAgain }: RoundProps) => {
   const choiceMapping = {
@@ -16,6 +11,7 @@ const Round = ({ userChoice, computerChoice, win, handlePlayAgain }: RoundProps)
     rock: { color: "#dc2e4e", icon: Rock },
   };
 
+  // Display correct color of image based on choice
   const getUserChoiceElement = (choice: string) => (
     <div
       className={`${
