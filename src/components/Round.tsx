@@ -33,7 +33,7 @@ const Round = ({ userChoice, computerChoice, win, handlePlayAgain }: RoundProps)
   );
 
   const emptyCircle = () => (
-    <div className="bg-black rounded-[100%] w-[8rem] h-[8rem] opacity-10"></div>
+    <div className="bg-[#00000039] animate-pulse rounded-[100%] w-[8rem] h-[8rem] opacity-10"></div>
   );
 
   return (

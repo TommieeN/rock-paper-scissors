@@ -52,7 +52,7 @@ const Game = () => {
     setTimeout(() => {
       const randomChoice = choices[Math.floor(Math.random() * choices.length)];
       setComputerChoice(randomChoice);
-    }, 1500);
+    }, 1800);
   };
 
   return (

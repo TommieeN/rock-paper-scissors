@@ -14,8 +14,8 @@ const Modal = () => {
             stiffness: 260,
             damping: 20
           }}
-          className="flex justify-center bg-gradient-rule w-[94%]
-          p-[1rem] rounded-[2rem] absolute top-[28%] z-50 lg:w-[25rem] lg:p-[2.5rem]"
+          className="flex justify-center bg-gradient-rule w-[94%]p-[1rem] 
+          rounded-[2rem] absolute top-[28%] z-50 lg:w-[25rem] lg:p-[2.5rem]"
         >
           <img src={rulesLogo} alt="rules-button" />
         </motion.div>
