@@ -12,7 +12,9 @@ module.exports = {
       },
       colors: {
         "border-primary": "#606e85;",
-        
+      },
+      screens: {
+        lg: "459px",
       },
     },
   },

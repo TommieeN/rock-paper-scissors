@@ -58,6 +58,7 @@ const Game = () => {
   return (
     <>
       <Header score={score}/>
+      <div className="flex flex-col justify-center items-center">
       {userChoice ? (
         <Round
           userChoice={userChoice}
@@ -68,6 +69,7 @@ const Game = () => {
       ) : (
         <Choice handleClick={handleClick} />
       )}
+    </div>
     </>
   );
 };

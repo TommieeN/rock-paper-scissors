@@ -38,7 +38,7 @@ const Round = ({ userChoice, computerChoice, win, handlePlayAgain }: RoundProps)
 
   return (
     <div className="my-[7rem] gap-[2rem] flex flex-wrap items-center justify-center">
-      <div className="text-center">
+      <div className="flex flex-col justify-between text-center">
         {userChoice && getUserChoiceElement(userChoice)}
         <p className="pt-[1rem] text-white">YOU PICKED</p>
         </div>
