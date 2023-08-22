@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'triangle-bg': "url('./src/assets/images/bg-triangle.svg')",
+        'triangle-bg': "url('../src/assets/images/bg-triangle.svg')",
         "gradient-rule": "linear-gradient(214deg, hsl(214, 47%, 23%), hsl(237, 49%, 15%))",
         "gradient-paper": "linear-gradient(214deg, hsl(230, 89%, 62%), hsl(230, 89%, 65%))",
         "gradient-scissors": "linear-gradient(214deg, hsl(39, 89%, 49%), hsl(40, 84%, 53%))",
