@@ -50,9 +50,9 @@ Like always, I tried breaking everything down to components from the mockups. St
 
 ### What I learned
 
-This was my first typescript project, I ran into a lot of issues not being able to properly set correct types to my functions and props. Over time it became a lot more easier to at least understant what typescript is and how to use it. A question I asked myself while working on this project was "When creating interfaces in parent components is it better to create one interface for all props/functions then pass it down, or is it better to create separate interfaces for each child component?". It basically came down to, how the project is setup and and list of other factors. 
+This was my first TypeScript project, and I faced numerous challenges while trying to assign accurate types to my functions and props. Over time, however, understanding TypeScript and its usage became much easier. One question that frequently crossed my mind during this project was, "Should I create a single interface for all props/functions in the parent component and pass it down? Or is it more effective to develop separate interfaces for each child component?" The answer largely depended on the project's structure and a range of other factors.
 
-Also learned that it's always better to refactor code after your finished, not before. I ended losing quite a bit of time having to refactor my refactored code half way through the project.
+I also learned the value of refactoring code after its completion, rather than before. I found myself spending a considerable amount of time reworking my refactored code midway through the project.
 
 Adding linear gradient colors to borders was also weird due to tailwind. 
 
@@ -66,8 +66,8 @@ Adding linear gradient colors to borders was also weird due to tailwind.
 ### Continued development
 
 - Implement Lizard and Spock options
-- Was also thinking about adding a betting option, so you would place a bet then choose rock, paper, or scissors etc.
-- Since there's betting also add something the user can buy
+- Was also thinking about adding a form of currency so you can bet if you win.
+- Since there's betting maybe add something the user can buy
 - Auth to save money progress
 
 ## Connect with me!
